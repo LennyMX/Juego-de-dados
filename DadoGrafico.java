@@ -25,6 +25,10 @@ public DadoGrafico(){
     cuadrado= new Square(100,10,20,"yellow",true);
     
 }
+public void moverDado(int dx, int dy) {
+    cuadrado.moveHorizontal(dx);
+    cuadrado.moveVertical(dy);
+}
 
 public void dibujarCara(int cara){
     switch(cara){
