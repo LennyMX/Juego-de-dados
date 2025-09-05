@@ -10,12 +10,21 @@ public class JuegoDado
 private Dado d1;
 private Dado d2;
 private Dado d3;
+private DadoGrafico dadoGraf1;
+private DadoGrafico dadoGraf2;
+private DadoGrafico dadoGraf3;
 private int dadosSumados=0;
 
 public JuegoDado(){
     d1=new Dado();
     d2=new Dado();
     d3=new Dado();
+    dadoGraf1 = new DadoGrafico();  
+    dadoGraf2 = new DadoGrafico();  
+    dadoGraf3 = new DadoGrafico();
+    dadoGraf1.moverDado(50, 100);
+    dadoGraf2.moverDado(200, 100);
+    dadoGraf3.moverDado(350, 100);
 }
 
 public void lanzar3Dados(){
@@ -55,5 +64,8 @@ public void jugar(){
     String resultado=Ganador()?"Felicidades es un ganador":"Has perdido";
     System.out.println(resultado);
     
+    dadoGraf1.dibujarCara(d1.getCaraActual());
+    dadoGraf2.dibujarCara(d2.getCaraActual());
+    dadoGraf3.dibujarCara(d3.getCaraActual());
 }
 }
